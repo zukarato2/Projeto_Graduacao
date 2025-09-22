@@ -22,8 +22,8 @@ int main() {
 
     // Cadastro da Carta 1
     printf("=== Cadastro da Carta 1 ===\n");
-    printf("Estado (A-H): ");
-    scanf(" %c", &estado1);
+    printf("UF (Ex: RJ, SP, MG, Etc...): ");
+    scanf(" %s", &estado1);
 
     printf("Código da Carta (ex: A01): ");
     scanf("%s", codigo1);
@@ -31,7 +31,6 @@ int main() {
     getchar(); // consome o \n que ficou do scanf anterior
     printf("Nome da Cidade: ");
     fgets(cidade1, sizeof(cidade1), stdin);
-    cidade1[strcspn(cidade1, "\n")] = '\0'; // remove o \n
 
     printf("População: ");
     scanf("%d", &populacao1);
@@ -56,7 +55,6 @@ int main() {
     getchar(); // consome o \n
     printf("Nome da Cidade: ");
     fgets(cidade2, sizeof(cidade2), stdin);
-    cidade2[strcspn(cidade2, "\n")] = '\0';
 
     printf("População: ");
     scanf("%d", &populacao2);
@@ -72,7 +70,7 @@ int main() {
 
     // Exibição das cartas
     printf("\n=== Carta 1 ===\n");
-    printf("Estado: %c\n", estado1);
+    printf("Estado: %s\n", estado1);
     printf("Código: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", cidade1);
     printf("População: %d\n", populacao1);
@@ -81,7 +79,7 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
 
     printf("\n=== Carta 2 ===\n");
-    printf("Estado: %c\n", estado2);
+    printf("Estado: %s\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
